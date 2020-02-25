@@ -4,6 +4,8 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
 /**
  * 关键词实体，用于定位问题表和答案表
  * @author zzp
@@ -25,25 +27,23 @@ public class KeyWord {
      * 关键字在系统中的的所有问题出现的次数
      */
     @Getter @Setter
-    private Integer wordTime;
+    private Integer wordTimes;
     /**
-     * 关键字词频
+     * 关键词是否禁用 0表示禁用 1表示使用
      */
     @Getter @Setter
-    private Double wordFrequency;
-    /**
-     * tf 值 词频 该词条在文档中出现的频率
-     */
+    private String ban;
+
     @Getter @Setter
-    private Double tf;
-    /**
-     * idf 逆向文件频率
-     */
+    private Date createTime;
+
     @Getter @Setter
-    private Double idf;
-    /**
-     *
-     */
-    @Getter @Setter
-    private Double ifIdf;
+    private Date updateTime;
+
+
+    /****************** 中间表 **********************/
+
+    private Integer questionId;
+
+
 }

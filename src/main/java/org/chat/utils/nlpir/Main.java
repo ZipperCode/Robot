@@ -22,7 +22,7 @@ public class Main {
         double vsm = Similarity.vsm(stringDoubleMap1, stringDoubleMap2);
         System.out.println(vsm);
 
-        System.out.println(NLPIR.getKeyWords("我是张志鹏",100,false));
+        System.out.println(NLPIR.getKeyWords("我我的我我是",100,false));
         NLPIR.exit();
 
     }
