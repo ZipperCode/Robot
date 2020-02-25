@@ -14,7 +14,7 @@ import java.util.Map;
 public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public Map<String,Object> exceptionHandler(){
+    public Map<String,Object> exceptionHandler(Exception ex){
         Map<String,Object> resultMap = new HashMap<>();
         resultMap.put("code","500");
         resultMap.put("msg","出现错误");

@@ -55,6 +55,14 @@
       </exclusions>
     </dependency>
 
+    <!-- 动态库加载 -->
+    <dependency>
+      <groupId>net.java.dev.jna</groupId>
+      <artifactId>jna</artifactId>
+      <version>4.1.0</version>
+    </dependency>
+
+
   </dependencies>
 
   <build>
