@@ -1,6 +1,9 @@
 package org.chat.service;
 
+import org.chat.vo.KeyWord;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * @author zzp
@@ -9,5 +12,13 @@ import org.springframework.stereotype.Service;
 @Service
 public interface IKeyWordService {
 
-    int add();
+    int add(KeyWord keyWord);
+
+    int update(KeyWord keyWord);
+
+    /**
+     * 查找关键词
+     * @return
+     */
+    List<KeyWord> keyWord();
 }
