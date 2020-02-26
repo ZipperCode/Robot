@@ -14,7 +14,6 @@ public class Result {
     private Object data;
 
     public Result(){
-
     }
 
     public Result(int code, String message, Object data) {

@@ -1,21 +1,11 @@
 package org.chat.controller;
 
 import org.chat.bean.Result;
-import org.chat.bean.ResultCode;
-import org.chat.service.IKeyWordService;
-import org.chat.utils.nlpir.NLPIR;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.constraints.NotNull;
-import java.util.Arrays;
-import org.chat.bean.vo.Question;
-import java.util.Set;
-import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 public class QuestionController {

@@ -1,5 +1,6 @@
 package org.chat.service;
 
+import org.chat.bean.vo.Common;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -26,5 +27,11 @@ public interface IQuestionRetrievalService {
      */
     Double compareSimilar(Map<String,Double> mapSrc,Map<String,Double> mapDest);
 
+    /**
+     * 常用表查找查找
+     * @param question
+     * @return
+     */
+    Common findWithCommon(String question);
 
 }

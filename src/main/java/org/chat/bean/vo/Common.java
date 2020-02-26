@@ -3,6 +3,7 @@ package org.chat.bean.vo;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Date;
 
@@ -11,6 +12,7 @@ import java.util.Date;
  * @date 2020/2/26
  */
 @Data
+@ToString
 public class Common {
     /**
      * id
@@ -27,6 +29,11 @@ public class Common {
      */
     @Getter @Setter
     private String answer;
+    /**
+     * 使用次数
+     */
+    @Getter @Setter
+    private Integer countTimes;
     /**
      * 创建时间
      */
