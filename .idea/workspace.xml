@@ -3,27 +3,27 @@
   <component name="ChangeListManager">
     <list default="true" id="7e05aadf-cdb4-4b5d-b67a-53d9070f4115" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/bean/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/bean/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/controller/QuestionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/dao/KeyWordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/dao/KeyWordMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/filter/GlobalCorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/config/GlobalCorsConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/service/IKeyWordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/service/IKeyWordService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/service/impl/QuestionRetrievalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/service/impl/QuestionRetrievalServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/vo/KeyWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/bean/vo/KeyWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/vo/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/bean/vo/Question.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/vo/Type.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/robot.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/robot.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="testRunner" value="GRADLE" />
@@ -158,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582620271390</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="vo dao service">
+      <created>1582710984485</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1582710984486</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,7 +186,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加NLPIR" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加NLPIR" />
+    <MESSAGE value="vo dao service" />
+    <option name="LAST_COMMIT_MESSAGE" value="vo dao service" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582554833689">
