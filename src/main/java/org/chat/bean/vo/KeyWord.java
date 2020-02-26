@@ -1,4 +1,4 @@
-package org.chat.vo;
+package org.chat.bean.vo;
 
 import lombok.Data;
 import lombok.Getter;
@@ -22,7 +22,17 @@ public class KeyWord {
      * 关键字
      */
     @Getter @Setter
-    private String keyWord;
+    private String keyword;
+    /**
+     * 词性
+     */
+    @Getter @Setter
+    private String nominal;
+    /**
+     * 每个词的权重
+     */
+    @Getter @Setter
+    private String wordWeight;
     /**
      * 关键字在系统中的的所有问题出现的次数
      */
@@ -33,17 +43,15 @@ public class KeyWord {
      */
     @Getter @Setter
     private String ban;
-
+    /**
+     * 创建时间
+     */
     @Getter @Setter
     private Date createTime;
-
+    /**
+     * 修改时间
+     */
     @Getter @Setter
     private Date updateTime;
-
-
-    /****************** 中间表 **********************/
-
-    private Integer questionId;
-
 
 }

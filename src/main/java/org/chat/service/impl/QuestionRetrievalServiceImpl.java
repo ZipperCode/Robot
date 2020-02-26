@@ -1,9 +1,11 @@
 package org.chat.service.impl;
 
 import org.chat.service.IQuestionRetrievalService;
+import org.springframework.stereotype.Service;
 
 import java.util.Map;
 
+@Service
 public class QuestionRetrievalServiceImpl implements IQuestionRetrievalService {
     @Override
     public Double compareSimilar(String qSrc, String qDest) {

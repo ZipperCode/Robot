@@ -1,18 +1,16 @@
 package org.chat.service;
 
-import org.chat.vo.KeyWord;
-import org.chat.vo.Question;
-import org.springframework.stereotype.Service;
+import org.chat.bean.vo.KeyWord;
+import org.chat.bean.vo.Question;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 /**
  * @author zzp
  * @date 2020/2/25
  */
-@Service
+
 public interface IKeyWordService {
 
     int add(KeyWord keyWord);

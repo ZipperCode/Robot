@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = {"org.chat.service","org.chat.controller"})
+@ComponentScan(basePackages = {"org.chat"})
 @MapperScan("org.chat.dao")
 @EnableAutoConfiguration
 public class App {

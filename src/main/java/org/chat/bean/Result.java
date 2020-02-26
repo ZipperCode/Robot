@@ -13,6 +13,9 @@ public class Result {
     @Getter @Setter
     private Object data;
 
+    public Result(){
+
+    }
 
     public Result(int code, String message, Object data) {
         this.code = code;
@@ -20,9 +23,27 @@ public class Result {
         this.data = data;
     }
 
+    public static Result getErrorResult(String message){
+        return getErrorResult(message,null);
+    }
+
+    public static Result getErrorResult(String message,Object object){
+        return new Result(10001,message,object);
+    }
+
     public Result(ResultCode resultCode, Object data) {
         this.data = data;
     }
 
+    public static Result failure(ResultCode resultCode){
+        return new Result(resultCode,null);
+    }
 
+    public static Result failure(int code, String message){
+        return failure(code,message,null);
+    }
+
+    public static Result failure(int code, String message, Object object){
+        return new Result(code,message,object);
+    }
 }
