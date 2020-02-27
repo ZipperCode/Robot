@@ -82,6 +82,7 @@ public class SubmitController {
         unAnsweredQuestion.setQuestion(question);
         unAnsweredQuestion.setCountTimes(1);
         unAnsweredQuestion.setSplit(this.questionRetrievalService.split(question));
+
 //        String keyWords = nlpir.getKeyWords(question, 10, false);
 //        Set<String> keyWordSet = Arrays.stream(keyWords.split("#")).collect(Collectors.toSet());
 //        // 根据关键字信息查询数据库是否有对应的关键字
@@ -90,7 +91,7 @@ public class SubmitController {
 //        List<Question> questionByKeyWords = keyWordService.findQuestionByKeyWords(keyWordIds);
 //        // 将问题与关键词查询的问题进行相似度比较
         // 封装最符合要求的结果
-        return new Result(ResultCode.SUCCESS,null);
+        return new Result(ResultCode.SUCCESS,"对不起，我还不能理解这个问题呢");
 
     }
 }
