@@ -3,10 +3,12 @@ package org.chat.dao;
 import org.apache.ibatis.annotations.*;
 import org.chat.bean.vo.Common;
 import org.chat.bean.vo.Question;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Mapper
+@Repository
 public interface CommonMapper {
 
     @Insert({"insert into common ",
@@ -21,13 +23,13 @@ public interface CommonMapper {
 
     @Select("select * from common where id = #{id}")
     @ResultMap("org.chat.dao.CommonMapper.BaseResultMap")
-    Question findById(Integer id);
+    Common findById(Integer id);
 
     @Select("select * from common where question like %#{keyword}%")
-    Question findByKeyword(String keyword);
+    List<Common> findByKeyword(String keyword);
 
     @Select("select * from question")
-    List<Question> list();
+    List<Common> list();
 
 
     List<Common> getCommonQuestion();

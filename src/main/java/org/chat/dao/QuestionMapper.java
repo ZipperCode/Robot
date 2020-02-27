@@ -4,10 +4,12 @@ import org.apache.ibatis.annotations.*;
 import org.chat.bean.vo.Common;
 import org.chat.bean.vo.KeyWord;
 import org.chat.bean.vo.Question;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Mapper
+@Repository
 public interface QuestionMapper {
 
     @Insert({"insert into question ",
@@ -20,13 +22,14 @@ public interface QuestionMapper {
             "answer = #{answer}, update_time = #{updateTime}"})
     int update(Question model);
 
+    int incCountTimes(Integer questionId);
+
     @Select("select * from question where id = #{id}")
     @ResultMap("org.chat.dao.QuestionMapper.BaseResultMap")
     Question findById(Integer id);
 
     @Select("select * from question")
     List<Question> list();
-
 
     List<Common> getCommonQuestion();
 

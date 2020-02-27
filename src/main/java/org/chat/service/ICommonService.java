@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Set;
 
-@Service
 public interface ICommonService {
 
     int add(Common common);
@@ -46,7 +45,7 @@ public interface ICommonService {
      * @param commonId id
      * @return 成功1 失败0
      */
-    int incCountTimes(String commonId);
+    int incCountTimes(Integer commonId);
 
 
 }

@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7e05aadf-cdb4-4b5d-b67a-53d9070f4115" name="Default Changelist" comment="">
+    <list default="true" id="7e05aadf-cdb4-4b5d-b67a-53d9070f4115" name="Default Changelist" comment="普通问题检索">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/chat/service/IUnAnsweredQuestionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/chat/service/impl/QuestionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/chat/service/impl/UnAnsweredQuestionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Mapper/UnAnsweredQuestionMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/bean/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/bean/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/bean/vo/Common.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/bean/vo/Common.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/controller/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/controller/QuestionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/controller/QuestionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/bean/vo/KeyWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/bean/vo/KeyWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/bean/vo/Question.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/bean/vo/Question.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/controller/SubmitController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/controller/SubmitController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/dao/CommonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/dao/CommonMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/dao/KeyWordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/dao/KeyWordMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/dao/QuestionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/dao/QuestionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/service/ICommonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/service/ICommonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/service/IKeyWordService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/service/IKeyWordService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/service/IQuestionRetrievalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/service/IQuestionRetrievalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/service/impl/KeyWordServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/service/impl/KeyWordServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/service/impl/QuestionRetrievalServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/service/impl/QuestionRetrievalServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/utils/StringUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/utils/StringUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/utils/nlpir/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/utils/nlpir/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/chat/utils/nlpir/NLPIR.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/chat/utils/nlpir/Nlpir.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/robot.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/robot.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,9 +52,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -84,13 +90,16 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/Mapper" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.chat.service" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.chat.dao" />
       <recent name="org.chat" />
@@ -130,6 +139,7 @@
       <updated>1582552798731</updated>
       <workItem from="1582552802780" duration="4012000" />
       <workItem from="1582645016072" duration="652000" />
+      <workItem from="1582807077468" duration="6674000" />
     </task>
     <task id="LOCAL-00001" summary="添加dao">
       <created>1582641490564</created>
@@ -145,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582727430925</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="普通问题检索">
+      <created>1582732694240</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1582732694240</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -154,45 +171,46 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加dao" />
     <MESSAGE value="修改冲突" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改冲突" />
+    <MESSAGE value="普通问题检索" />
+    <option name="LAST_COMMIT_MESSAGE" value="普通问题检索" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582635397143">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582635397143" />
-    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1582730349250">
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser" timestamp="1582813872132">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582730349250" />
+    <state x="488" y="83" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1582813872132" />
     <state x="431" y="231" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1582645542722">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="431" y="231" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1366.728@0.0.1366.728" timestamp="1582645542722" />
-    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1582727429281">
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1582813471257">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582727429281" />
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582813471257" />
     <state x="463" y="122" key="FileChooserDialogImpl" timestamp="1582642883451">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="122" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1582642883451" />
-    <state width="1323" height="263" key="GridCell.Tab.0.bottom" timestamp="1582730756261">
+    <state width="1323" height="263" key="GridCell.Tab.0.bottom" timestamp="1582814034477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582730756261" />
-    <state width="1323" height="263" key="GridCell.Tab.0.center" timestamp="1582730756261">
+    <state width="1323" height="263" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582814034477" />
+    <state width="1323" height="263" key="GridCell.Tab.0.center" timestamp="1582814034477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582730756261" />
-    <state width="1323" height="263" key="GridCell.Tab.0.left" timestamp="1582730756261">
+    <state width="1323" height="263" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582814034477" />
+    <state width="1323" height="263" key="GridCell.Tab.0.left" timestamp="1582814034477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582730756261" />
-    <state width="1323" height="263" key="GridCell.Tab.0.right" timestamp="1582730756261">
+    <state width="1323" height="263" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582814034477" />
+    <state width="1323" height="263" key="GridCell.Tab.0.right" timestamp="1582814034477">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="263" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582730756261" />
+    <state width="1323" height="263" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582814034477" />
     <state width="1323" height="263" key="GridCell.Tab.1.bottom" timestamp="1582557299897">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -213,10 +231,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1582635098063" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1582727436441">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1582732700753">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1582727436441" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1582732700753" />
     <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582727395363">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

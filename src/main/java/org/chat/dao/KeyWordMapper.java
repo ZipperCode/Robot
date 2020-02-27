@@ -2,10 +2,12 @@ package org.chat.dao;
 
 import org.apache.ibatis.annotations.*;
 import org.chat.bean.vo.KeyWord;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Mapper
+@Repository
 public interface KeyWordMapper {
 
     @Insert({"insert into keyword (keyword,word_times,ban,create_time,update_time)",
@@ -28,6 +30,7 @@ public interface KeyWordMapper {
     @ResultType(Long.class)
     Long count();
 
+    int incCountKeyword(Integer keywordId);
 
 
 }

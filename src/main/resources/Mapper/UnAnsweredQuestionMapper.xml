@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.chat.dao.UnAnsweredQuestionMapper">
+  <resultMap id="BaseResultMap" type="org.chat.vo.UnAnsweredQuestion">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="question" jdbcType="VARCHAR" property="question" />
+    <result column="split" jdbcType="TEXT" property="split" />
+    <result column="answer" jdbcType="VARCHAR" property="answer" />
+    <result column="create_time" jdbcType="DATETIME" property="createTime"/>
+    <result column="update_time" jdbcType="DATETIME" property="updateTime"/>
+  </resultMap>
+
+
+</mapper>

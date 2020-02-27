@@ -34,6 +34,15 @@ public class Result {
         this.data = data;
     }
 
+
+    public static Result success(){
+        return success(null);
+    }
+
+    public static Result success(Object object){
+        return new Result(ResultCode.SUCCESS,object);
+    }
+
     public static Result failure(ResultCode resultCode){
         return new Result(resultCode,null);
     }
@@ -45,4 +54,5 @@ public class Result {
     public static Result failure(int code, String message, Object object){
         return new Result(code,message,object);
     }
+
 }

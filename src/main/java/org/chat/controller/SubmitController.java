@@ -5,8 +5,12 @@ import org.chat.bean.Result;
 import org.chat.bean.ResultCode;
 import org.chat.bean.vo.Common;
 import org.chat.bean.vo.Question;
+import org.chat.bean.vo.UnAnsweredQuestion;
 import org.chat.service.ICommonService;
 import org.chat.service.IKeyWordService;
+import org.chat.service.IQuestionRetrievalService;
+import org.chat.service.IQuestionService;
+import org.chat.service.impl.QuestionRetrievalServiceImpl;
 import org.chat.utils.nlpir.Nlpir;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,6 +34,10 @@ public class SubmitController {
     private IKeyWordService keyWordService;
     @Autowired
     private ICommonService commonService;
+    @Autowired
+    private IQuestionRetrievalService questionRetrievalService;
+    @Autowired
+    private IQuestionService questionService;
 
     @Autowired
     private Nlpir nlpir;
@@ -55,20 +63,34 @@ public class SubmitController {
     @GetMapping("/submit")
     @ResponseBody
     public Result submit(@NotNull(message = "我还没有收到问题呢!") String question){
-
-        String keyWords = nlpir.getKeyWords(question, 10, false);
-        Set<String> keyWordSet = Arrays.stream(keyWords.split("#")).collect(Collectors.toSet());
-        // 根据关键字信息查询数据库是否有对应的关键字
-        Set<Integer> keyWordIds = keyWordService.findKeyWord(keyWordSet);
-        // 根据关键词查找问题
-        List<Question> questionByKeyWords = keyWordService.findQuestionByKeyWords(keyWordIds);
-        // 将问题与关键词查询的问题进行相似度比较
-        Question resultQuestion = null;
-        for(Question q : questionByKeyWords){
-
+        // 查询常用表，是否存在记录
+        Common commonQuestion = this.questionRetrievalService.findWithCommon(question);
+        if(commonQuestion != null){
+            // 计数加一
+            this.commonService.incCountTimes(commonQuestion.getId());
+            return Result.success(commonQuestion);
         }
+        // 常用表不存在记录，查询关键词表
+        Question withQuestion = this.questionRetrievalService.findWithQuestion(question);
+        if(withQuestion != null){
+            this.questionService.incQuestionCountTimes(withQuestion.getId());
+            this.keyWordService.incKeywordCountTimesByQuestionId(withQuestion.getId());
+            return Result.success(withQuestion);
+        }
+        // 问题未得到解答 将该问题加入到为解答信息表 unanswered表
+        UnAnsweredQuestion unAnsweredQuestion = new UnAnsweredQuestion();
+        unAnsweredQuestion.setQuestion(question);
+        unAnsweredQuestion.setCountTimes(1);
+        unAnsweredQuestion.setSplit(this.questionRetrievalService.split(question));
+//        String keyWords = nlpir.getKeyWords(question, 10, false);
+//        Set<String> keyWordSet = Arrays.stream(keyWords.split("#")).collect(Collectors.toSet());
+//        // 根据关键字信息查询数据库是否有对应的关键字
+//        Set<Integer> keyWordIds = keyWordService.findKeyWord(keyWordSet);
+//        // 根据关键词查找问题
+//        List<Question> questionByKeyWords = keyWordService.findQuestionByKeyWords(keyWordIds);
+//        // 将问题与关键词查询的问题进行相似度比较
         // 封装最符合要求的结果
-        return new Result(ResultCode.SUCCESS,new Question());
+        return new Result(ResultCode.SUCCESS,null);
 
     }
 }

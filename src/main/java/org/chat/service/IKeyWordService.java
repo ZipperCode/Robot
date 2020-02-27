@@ -1,5 +1,6 @@
 package org.chat.service;
 
+import org.apache.ibatis.javassist.compiler.ast.Keyword;
 import org.chat.bean.vo.KeyWord;
 import org.chat.bean.vo.Question;
 
@@ -18,16 +19,41 @@ public interface IKeyWordService {
     int update(KeyWord keyWord);
 
     /**
+     * 关键词引用加一
+     * @param keywordId
+     * @return
+     */
+    int incKeywordCountTimes(Integer keywordId);
+
+    /**
+     * 根据问题id进行关键字计数
+     * @param questionId
+     * @return
+     */
+    int incKeywordCountTimesByQuestionId(Integer questionId);
+
+    /**
      * 查找关键词
      * @return
      */
     List<KeyWord> keyWord();
 
-    Set<Integer> findKeyWord(Set<String> keyWord);
-
+    /**
+     * 查询的到关键词表与
+     * @param keyWord
+     * @return
+     */
+    Set<Integer> findQuestionId(Set<String> keyWord);
 
     /**
-     * 通过keyWord 的id查询对应的问题
+     * 查找关键匹配的关键词列表
+     * @param keyword
+     * @return
+     */
+    Set<KeyWord> findKeywords(Set<String> keyword);
+
+    /**
+     * 通过keyWord的id查询对应的问题id
      * @param keyWordIds
      * @return
      */

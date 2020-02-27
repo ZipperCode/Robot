@@ -36,6 +36,19 @@ public class StringUtils {
         return result;
     }
 
+    @Log
+    public static String format(String text){
+        String[] words = text.split("#");
+
+        StringBuilder stringBuilder = new StringBuilder();
+
+        for (String e : words) {
+            String s = e.replaceAll("/\\w+/", " ");
+            stringBuilder.append(s);
+        }
+        return stringBuilder.toString();
+    }
+
     /**
      * 解析数据库中获取的分词权重 分词:权重
      * @param text 分词权重文本

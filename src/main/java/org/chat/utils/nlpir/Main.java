@@ -14,6 +14,7 @@ public class Main {
         Nlpir nlpir = new Nlpir();
         String string1 = nlpir.wordFreqStat("你好,我是张志鹏");
         String string2 = nlpir.wordFreqStat("你是张志鹏吗");
+        System.out.println(string1);
         Map<String, Double> stringDoubleMap1 = StringUtils.wordFrequency(string1);
         Map<String, Double> stringDoubleMap2 = StringUtils.wordFrequency(string2);
 

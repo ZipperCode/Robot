@@ -27,11 +27,6 @@ public class Question {
      */
     @Getter @Setter
     private String split;
-    /**
-     *  关键词 关联的关键词表
-     */
-    @Getter @Setter
-    private KeyWord keyword;
 
     /**
      * 每个词的权重
@@ -54,4 +49,9 @@ public class Question {
     @Getter @Setter
     private Date updateTime;
 
+    /**
+     *  关键词 关联的关键词表
+     */
+    @Getter @Setter
+    private KeyWord keyword;
 }

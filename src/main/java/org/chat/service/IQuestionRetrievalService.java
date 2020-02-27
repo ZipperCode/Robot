@@ -1,14 +1,17 @@
 package org.chat.service;
 
+import org.apache.ibatis.javassist.compiler.ast.Keyword;
 import org.chat.bean.vo.Common;
+import org.chat.bean.vo.Question;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * 问题检索服务
  */
-@Service
 public interface IQuestionRetrievalService {
 
     /**
@@ -27,11 +30,28 @@ public interface IQuestionRetrievalService {
      */
     Double compareSimilar(Map<String,Double> mapSrc,Map<String,Double> mapDest);
 
+    String split(String question);
+
     /**
      * 常用表查找查找
      * @param question
      * @return
      */
     Common findWithCommon(String question);
+
+    /**
+     * 问题表查找
+     * @param question
+     * @return
+     */
+    Question findWithQuestion(String question);
+
+    /**
+     *
+     * @param question
+     * @return
+     */
+    List<Keyword> findMatchKeywords(String question);
+
 
 }
