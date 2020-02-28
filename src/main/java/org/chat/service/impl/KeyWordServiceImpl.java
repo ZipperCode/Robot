@@ -22,12 +22,12 @@ public class KeyWordServiceImpl implements IKeyWordService {
 
     @Override
     public int add(KeyWord keyWord) {
-        return 0;
+        return this.keyWordMapper.insert(keyWord);
     }
 
     @Override
     public int update(KeyWord keyWord) {
-        return 0;
+        return this.keyWordMapper.update(keyWord);
     }
 
     @Override
@@ -37,12 +37,27 @@ public class KeyWordServiceImpl implements IKeyWordService {
 
     @Override
     public int incKeywordCountTimesByQuestionId(Integer questionId) {
-        return 0;
+        return this.keyWordMapper.incCountTimesByQuestionId(questionId);
     }
 
     @Override
-    public List<KeyWord> keyWord() {
-        return null;
+    public int incQuestionCountTimesByKeywordId(Integer keywordId) {
+        return this.keyWordMapper.incQuestionCountTimesByKeywordId(keywordId);
+    }
+
+    @Override
+    public long countKeyword() {
+        return this.keyWordMapper.count();
+    }
+
+    @Override
+    public List<KeyWord> findKeyWordList() {
+        return this.keyWordMapper.list();
+    }
+
+    @Override
+    public Set<Integer> findQuestionId(String keyword) {
+        return this.keyWordMapper.selectQuestionIdByKeyword(keyword);
     }
 
     @Override
@@ -57,6 +72,6 @@ public class KeyWordServiceImpl implements IKeyWordService {
 
     @Override
     public List<Question> findQuestionByKeyWords(Set<Integer> keyWordIds) {
-        return null;
+        return this.keyWordMapper.selectQuestionByKeywordIds(keyWordIds);
     }
 }

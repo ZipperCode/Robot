@@ -5,11 +5,47 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="key_word" jdbcType="VARCHAR" property="keyWord" />
     <result column="word_time" jdbcType="INTEGER" property="wordTime" />
-    <result column="word_time" jdbcType="INTEGER" property="wordTime" />
+    <result column="count_times" jdbcType="INTEGER" property="countTimes" />
     <result column="create_time" jdbcType="DATETIME" property="createTime"/>
     <result column="update_time" jdbcType="DATETIME" property="updateTime"/>
   </resultMap>
 
+  <update id="incCountTimesByQuestionId" >
+    update from keyword set count_times = count_times + 1
+    where keyword.id in (
+        select keyword.id from keyword_question
+        left join keyword on keyword.id = keyword_question.keyword_id
+        where quesiton_id = #{questionId}
+    )
+  </update>
 
+  <update id="incQuestionCountTimesByKeywordId" >
+    update from question set count_times = count_times + 1
+    where question.id in (
+        select question.id from keyword_question
+        left join question on question.id = keyword_question.keyword_id
+        where keyword_id = #{keywordId}
+    )
+  </update>
 
+  <select id="selectQuestionIdByKeyword" resultType="java.util.Set">
+    select question.id from keyword_question kq
+    left join keyword on keyword.id = kq.keyword_id
+    left join question on question.id = kq.question_id
+    where keyword.keyword like concat('%',#{keyword},'%')
+  </select>
+
+  <select id="selectQuestionIdByKeywordSet" resultType="java.util.List">
+    select question.id from keyword_question
+    /* ...*/
+  </select>
+
+  <select id="selectQuestionByKeywordIds" resultMap="BaseResultMap">
+    selct q.* from keyword_question kq
+    left join question q on q.id = kq.question_id
+    where kq.keyword_id in
+    <foreach collection="keywordIds" item="keywordId" open="(" separator="," close=")">
+      #{keywordId}
+    </foreach>
+  </select>
 </mapper>

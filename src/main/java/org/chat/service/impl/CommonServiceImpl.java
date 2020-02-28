@@ -17,36 +17,48 @@ public class CommonServiceImpl implements ICommonService {
 
     @Override
     public int add(Common common) {
-        return 0;
+        return this.commonMapper.insert(common);
     }
 
     @Override
     public int update(Common common) {
-        return 0;
+        return this.commonMapper.update(common);
     }
 
     @Override
     public Common findById(Integer id) {
-        return null;
+        return this.commonMapper.findById(id);
     }
 
     @Override
-    public Common findByQuestion(String question) {
-        return null;
+    public Common findByQuestionOne(String question) {
+        return this.commonMapper.findByKeywordOne(question);
+    }
+
+    @Override
+    public List<Common> findByQuestion(String question) {
+        return this.commonMapper.selectByQuestion(question);
     }
 
     @Override
     public List<Common> findByKeyword(String keyword) {
-        return this.commonMapper.findByKeyword(keyword);
+        return this.commonMapper.selectByKeyword(keyword);
     }
 
-    @Override
-    public List<Common> findByKeywords(Set<String> keywords) {
-        return null;
-    }
+
+
+//    @Override
+//    public List<Common> findByKeywords(Set<String> keywords) {
+//        return null;
+//    }
 
     @Override
     public int incCountTimes(Integer commonId) {
-        return 0;
+        return this.commonMapper.incCountTimes(commonId);
+    }
+
+    @Override
+    public long count() {
+        return this.commonMapper.count();
     }
 }

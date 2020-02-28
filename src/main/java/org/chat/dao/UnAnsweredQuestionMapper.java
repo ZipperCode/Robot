@@ -7,6 +7,7 @@ import org.chat.bean.vo.UnAnsweredQuestion;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Map;
 
 @Mapper
 @Repository
@@ -31,6 +32,6 @@ public interface UnAnsweredQuestionMapper {
     @Select("select * from unanswered")
     List<UnAnsweredQuestion> list();
 
-    List<UnAnsweredQuestion> getCommonQuestion();
+    List<UnAnsweredQuestion> selectByCondition(Map<String,Object> set);
 
 }

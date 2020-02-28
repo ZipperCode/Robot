@@ -31,6 +31,6 @@ public interface QuestionMapper {
     @Select("select * from question")
     List<Question> list();
 
-    List<Common> getCommonQuestion();
+    List<Question> selectByKeyword(String keyword);
 
 }

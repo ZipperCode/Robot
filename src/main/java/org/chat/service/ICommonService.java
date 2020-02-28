@@ -25,7 +25,9 @@ public interface ICommonService {
      * @param question 问题
      * @return 问题数据
      */
-    Common findByQuestion(String question);
+    Common findByQuestionOne(String question);
+
+    List<Common> findByQuestion(String question);
 
     /**
      * 根据关键词查询
@@ -39,7 +41,7 @@ public interface ICommonService {
      * @param keywords 关键词集合
      * @return 匹配结果
      */
-    List<Common> findByKeywords(Set<String> keywords);
+    // List<Common> findByKeywords(Set<String> keywords);
     /**
      * 更新某个问题的使用值
      * @param commonId id
@@ -47,5 +49,6 @@ public interface ICommonService {
      */
     int incCountTimes(Integer commonId);
 
+    long count();
 
 }

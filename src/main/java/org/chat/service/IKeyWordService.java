@@ -33,11 +33,29 @@ public interface IKeyWordService {
     int incKeywordCountTimesByQuestionId(Integer questionId);
 
     /**
+     * 通过问题id 进行关键词表的技术
+     * @param keywordId
+     * @return
+     */
+    int incQuestionCountTimesByKeywordId(Integer keywordId);
+    /**
+     * 统计关键词个数
+     * @return
+     */
+    long countKeyword();
+
+    /**
      * 查找关键词
      * @return
      */
-    List<KeyWord> keyWord();
+    List<KeyWord> findKeyWordList();
 
+    /**
+     * 查询的到关键词表与
+     * @param keyword
+     * @return
+     */
+    Set<Integer> findQuestionId(String keyword);
     /**
      * 查询的到关键词表与
      * @param keyWord

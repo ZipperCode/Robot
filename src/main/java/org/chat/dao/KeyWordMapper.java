@@ -2,9 +2,11 @@ package org.chat.dao;
 
 import org.apache.ibatis.annotations.*;
 import org.chat.bean.vo.KeyWord;
+import org.chat.bean.vo.Question;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Set;
 
 @Mapper
 @Repository
@@ -18,6 +20,17 @@ public interface KeyWordMapper {
             "ban = #{ban}, update_time = #{updateTime}"})
     int update(KeyWord keyWord);
 
+    @Update("update keyword set count_times = count_times + 1 , set update_time = now() where id = #{id}")
+    int incCountKeyword(Integer keywordId);
+
+    @Select("select count(*) from keyword")
+    @ResultType(Long.class)
+    Long count();
+
+    int incCountTimesByQuestionId(Integer questionId);
+
+    int incQuestionCountTimesByKeywordId(Integer keywordId);
+
     @Select("select * from keyword where id = #{id}")
     @ResultMap("org.chat.dao.KeyWordMapper.BaseResultMap")
     KeyWord findById(Integer id);
@@ -26,11 +39,12 @@ public interface KeyWordMapper {
     @ResultMap("org.chat.dao.KeyWordMapper.BaseResultMap")
     List<KeyWord> list();
 
-    @Select("select count(*) from keyword")
-    @ResultType(Long.class)
-    Long count();
+    Set<Integer> selectQuestionIdByKeyword(String keyword);
 
-    int incCountKeyword(Integer keywordId);
+    List<Integer> selectQuestionIdByKeywordSet(Set<String> keyWords);
+
+    List<Question> selectQuestionByKeywordIds(Set<Integer> keywordIds);
+
 
 
 }
