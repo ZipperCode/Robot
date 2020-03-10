@@ -21,6 +21,10 @@ public class Result {
         this.message = message;
         this.data = data;
     }
+    public Result(int code, String message) {
+        this.code = code;
+        this.message = message;
+    }
 
     public static Result getErrorResult(String message){
         return getErrorResult(message,null);

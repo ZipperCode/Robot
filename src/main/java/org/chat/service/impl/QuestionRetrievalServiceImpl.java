@@ -55,7 +55,7 @@ public class QuestionRetrievalServiceImpl implements IQuestionRetrievalService {
      */
     @Override @Log
     public Common findWithCommon(String question) {
-        Common commonQuestion = this.commonService.findByQuestion(question);
+        Common commonQuestion = this.commonService.findByQuestionOne(question);
         log.info(commonQuestion);
         if(commonQuestion != null){
             return commonQuestion;
